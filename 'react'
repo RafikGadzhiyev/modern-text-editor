@@ -1,0 +1,44 @@
+-m 'react application'
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	new file:   .firebase/hosting.YnVpbGQ.cache
+#	modified:   package-lock.json
+#	modified:   package.json
+#	modified:   public/index.html
+#	deleted:    src/App.css
+#	modified:   src/App.js
+#	deleted:    src/App.test.js
+#	new file:   src/components/CreateNewFile.jsx
+#	new file:   src/components/CreateWordFile.jsx
+#	new file:   src/components/DownloadFileBlock.jsx
+#	new file:   src/components/EditNotepadFile.jsx
+#	new file:   src/components/EditNotepadHTMLFile.jsx
+#	new file:   src/components/MainPage.jsx
+#	new file:   src/components/NotepadPage.jsx
+#	new file:   src/fonts/Caveat-VariableFont_wght.ttf
+#	new file:   src/fonts/Comfortaa-VariableFont_wght.ttf
+#	new file:   src/fonts/Inter-VariableFont_slnt,wght.ttf
+#	new file:   src/fonts/Roboto-Black.ttf
+#	new file:   src/fonts/RobotoMono-VariableFont_wght.ttf
+#	new file:   src/images and icons/icons/Vector.svg
+#	new file:   src/images and icons/icons/copy.svg
+#	new file:   src/images and icons/icons/edit.svg
+#	new file:   src/images and icons/icons/log-in.svg
+#	new file:   src/images and icons/icons/main-page-file.svg
+#	new file:   src/images and icons/icons/plus.svg
+#	deleted:    src/index.css
+#	modified:   src/index.js
+#	deleted:    src/logo.svg
+#	new file:   src/styles/fonts.css
+#	new file:   src/styles/fonts.css.map
+#	new file:   src/styles/fonts.scss
+#	new file:   src/styles/responsive.css
+#	new file:   src/styles/responsive.css.map
+#	new file:   src/styles/responsive.scss
+#	new file:   src/styles/style.css
+#	new file:   src/styles/style.css.map
+#	new file:   src/styles/style.scss
+#

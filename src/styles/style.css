@@ -1,0 +1,750 @@
+@import url(f:\Programming\Future work\My CV\CV projects\JS projects\notepad with cool design from Timur\notepad\src\styles\fonts.css);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: #e5e5e5;
+}
+
+::selection {
+  background-color: #e5e5e5;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter';
+  background-color: #e5e5e5;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+textarea {
+  font-family: 'Inter';
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Content container */
+.content-container {
+  width: 40%;
+  height: 800px;
+  background-color: #fff;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 5.55003px 27.7502px rgba(136, 136, 136, 0.295);
+          box-shadow: 0px 5.55003px 27.7502px rgba(136, 136, 136, 0.295);
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Main page section*/
+.main-page-container {
+  padding: 60px 45px 100px;
+}
+
+.main-page-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #444;
+  text-align: center;
+}
+
+.main-page-file-icon {
+  display: block;
+  margin: 55px auto 123px;
+}
+
+.go-to__notepad-button {
+  width: 100%;
+  background-color: #5cdfa7;
+  color: white;
+  height: 85px;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 10px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.go-to__notepad-button:hover {
+  background-color: #56c997;
+}
+
+/* Notepad container */
+.notepad__content-container,
+.edit-container,
+.create_content-container {
+  padding: 72px 44.4px;
+}
+
+.go-to__main-menu-button {
+  color: #88E0EF;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.go-to__main-menu-button:hover {
+  color: #46c8df;
+}
+
+.main-button-container,
+.notepad-title {
+  margin-left: 35px;
+}
+
+.notepad-title {
+  margin-block: 8px 32px;
+  color: #444;
+}
+
+.notepad-list {
+  height: 590px;
+  overflow: auto;
+}
+
+.notepad-list::-webkit-scrollbar {
+  width: 16px;
+}
+
+.notepad-list::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.notepad-list::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 100px;
+}
+
+.notepad-file {
+  width: 100%;
+  height: 84px;
+  -webkit-box-shadow: 0px 5px 20px -5px rgba(136, 136, 136, 0.329);
+          box-shadow: 0px 5px 20px -5px rgba(136, 136, 136, 0.329);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  color: #444;
+}
+
+.notepad-file.html-file {
+  color: #16C79A;
+}
+
+.notepad-file.text::before {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #c4c4c4;
+  content: '';
+}
+
+.notepad-file.html-file::before {
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #16C79A;
+  content: '';
+}
+
+.file-content-container {
+  padding-inline: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: inherit;
+}
+
+.description-container {
+  padding-left: 40px;
+}
+
+.options-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.file-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.last-changes {
+  color: #c0c0c0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.bi {
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.copy-icon:hover {
+  color: #ffd650;
+}
+
+.edit-icon:hover {
+  color: #2FDD92;
+}
+
+.delete-icon:hover {
+  color: #ff3f00;
+}
+
+.download-icon:hover {
+  color: #88E0EF;
+}
+
+/* Editor section */
+.editor-container {
+  width: 100%;
+  background-color: #f6f5f5;
+  padding: 33px 30px 33px 40px;
+  border-radius: 20px;
+  height: 100%;
+  position: relative;
+}
+
+.font-size-field,
+.font-color-field {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: auto;
+  text-align: center;
+  width: 70px;
+}
+
+.item-3 button {
+  width: 100%;
+}
+
+.navigation-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.fonts-container,
+.text-styles-container {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+  font-size: 25px;
+  margin-top: 10px;
+  border-top-left-radius: 0;
+  position: absolute;
+  display: none;
+}
+
+.fonts-container button,
+.text-styles-container button {
+  width: 100%;
+  text-align: left;
+}
+
+.fonts-container::before,
+.text-styles-container::before {
+  content: '';
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+  top: -20px;
+  left: 0;
+}
+
+.text-position-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.file-content-field {
+  width: 100%;
+  height: 450px;
+  overflow: auto;
+  resize: none;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  background-color: #f6f5f5;
+  font-family: 'Inter';
+}
+
+.active-flex {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.save-changes_button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #FF3F00;
+  color: #fff;
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+}
+
+.edit-pen-icon {
+  font-size: 30px;
+}
+
+.text-icon {
+  font-size: 22px;
+}
+
+.text-icon:hover {
+  color: #0044C7;
+}
+
+.active-icon {
+  color: #0044C7;
+}
+
+.current-font-family,
+.current-text-style {
+  font-size: 20px;
+}
+
+.text-style__button,
+.text-font_button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.active-list {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.create__new-file-button {
+  width: 95px;
+  height: 95px;
+  background-color: #2D46B9;
+  color: white;
+  border-radius: 50%;
+  line-height: 95px;
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  bottom: 45px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.create__new-file-button:hover {
+  background-color: #1735b9;
+}
+
+.hidden-spot {
+  display: none;
+}
+
+.hidden-spot:checked ~ label > .create__new-file-button {
+  background-color: #FF3F00;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hidden-spot:checked ~ .file-types .file {
+  bottom: 90px;
+  right: 140px;
+}
+
+.hidden-spot:checked ~ .file-types .html {
+  bottom: 150px;
+  right: 50px;
+}
+
+.create__file-icon {
+  font-size: 35px;
+}
+
+.fl {
+  width: 70px;
+  height: 70px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 5px;
+  border-radius: 50%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  position: absolute;
+}
+
+.fl button {
+  color: white;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.file {
+  background-color: #3F3F44;
+  bottom: 50px;
+  right: 30px;
+}
+
+.file:hover {
+  background-color: #707070;
+}
+
+.html {
+  background-color: #16C79A;
+  bottom: 50px;
+  right: 30px;
+}
+
+.html:hover {
+  background-color: #00e2aa;
+}
+
+.create-new-file {
+  background-color: #F4F4F2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.create-new-file__button {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.create-new-file__button i {
+  font-size: 40px;
+  color: #C0C0C0;
+}
+
+.create-new-file__button:hover {
+  background-color: #ececec;
+}
+
+.create-new-file__button:hover i {
+  color: black;
+}
+
+/* Creating section */
+.create-file_data-container {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.file-name-container,
+.file_content-container {
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 35px;
+}
+
+.file-name-field {
+  height: 70px;
+  font-size: 20px;
+  text-indent: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f6f5f5;
+}
+
+.file-content {
+  resize: none;
+  background-color: #F6F5F5;
+  border: none;
+  border-radius: 20px;
+  height: 500px;
+  font-family: 'Inter';
+  font-size: 22px;
+  padding: 15px 30px;
+  outline: none;
+}
+
+.file-content::-webkit-scrollbar {
+  width: 16px;
+}
+
+.file-content::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.file-content::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 100px;
+}
+
+.create-part {
+  bottom: 25px;
+  right: 25px;
+}
+
+/*
+    Download Section 
+*/
+.download-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f5f585;
+  z-index: 10000;
+  position: absolute;
+  color: #444444;
+}
+
+.download-container {
+  width: 70%;
+  border-radius: 20px;
+  height: 70%;
+  z-index: 10000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 25px;
+}
+
+.dw-header-part {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+}
+
+.dw-main-container {
+  width: 100%;
+  height: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  padding-top: 40px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.dw-file-container {
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: #f4f2f2;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.title-container {
+  width: 100%;
+  height: 25%;
+  background-color: #16C79A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.title-container.txt {
+  background-color: #c4c4c4;
+  color: #444444;
+}
+
+.main_dw-content-container {
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dw_file-button {
+  width: 100%;
+  height: 35px;
+  padding: 5px;
+  background-color: #c4c4c4;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.dw_file-button:hover {
+  background-color: #e0e0e0;
+}
+
+.dw_file-button.dw-msWord_button {
+  background-color: #16C79A;
+  color: white;
+}
+
+.dw_file-button.dw-msWord_button:hover {
+  background-color: #31d4ac;
+}
+
+.close-dw_block-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.close-icon {
+  font-size: 35px;
+}
+
+.file-content-field-editor,
+.file-content-field-preview {
+  width: 100%;
+  height: 50%;
+}
+
+.file-content-field-preview {
+  overflow: auto;
+}
+
+.file-content-field-preview::-webkit-scrollbar {
+  width: 16px;
+}
+
+.file-content-field-preview::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.file-content-field-preview::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 100px;
+}
+
+.editor {
+  border: none;
+  outline: none;
+  width: inherit;
+  height: 100%;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  background-color: transparent;
+  resize: none;
+}
+
+.editor::-webkit-scrollbar {
+  width: 16px;
+}
+
+.editor::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 100px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 100px;
+}
+
+.file-content-field-preview {
+  border-top: 3px solid #3F3F44;
+  border-radius: 0 0 10px 10px;
+  padding: 15px;
+}
+/*# sourceMappingURL=style.css.map */

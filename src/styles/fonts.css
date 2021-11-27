@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Inter';
+  src: url("./../fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("./../fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url("./../fonts/Comfortaa-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'CaveAt';
+  src: url("./../fonts/Caveat-VariableFont_wght.ttf");
+}
+/*# sourceMappingURL=fonts.css.map */

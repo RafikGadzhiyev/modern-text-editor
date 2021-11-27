@@ -1,0 +1,706 @@
+@import './fonts.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #e5e5e5;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter';
+    background-color: #e5e5e5;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+textarea {
+    font-family: 'Inter';
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Content container */
+
+.content-container {
+    width: 40%;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 5.55003px 27.7502px rgba(136, 136, 136, 0.295);
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main page section*/
+
+.main-page-container {
+    padding: 60px 45px 100px;
+}
+
+.main-page-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #444;
+    text-align: center;
+}
+
+.main-page-file-icon {
+    display: block;
+    margin: 55px auto 123px;
+}
+
+.go-to__notepad-button {
+    width: 100%;
+    background-color: #5cdfa7;
+    color: white;
+    height: 85px;
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: .3s ease;
+
+    &:hover {
+        background-color: #56c997;
+    }
+
+}
+
+/* Notepad container */
+.notepad__content-container,
+.edit-container,
+.create_content-container {
+    padding: 72px 44.4px;
+}
+
+.go-to__main-menu-button {
+    color: #88E0EF;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: .3s ease;
+
+    &:hover {
+        color: #46c8df;
+    }
+
+}
+
+.main-button-container,
+.notepad-title {
+    margin-left: 35px;
+}
+
+.notepad-title {
+    margin-block: 8px 32px;
+    color: #444;
+}
+
+.notepad-list {
+    height: 590px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #C4C4C4;
+        border-radius: 100px;
+    }
+}
+
+.notepad-file {
+    width: 100%;
+    height: 84px;
+    box-shadow: 0px 5px 20px -5px rgba(136, 136, 136, 0.329);
+    border-radius: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    color: #444;
+
+    &.html-file {
+        color: #16C79A;
+    }
+
+    &.text::before {
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: #c4c4c4;
+        content: '';
+    }
+
+    &.html-file::before {
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: #16C79A;
+        content: '';
+    }
+
+}
+
+.file-content-container {
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit
+}
+
+.description-container {
+    padding-left: 40px;
+}
+
+.options-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.file-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.last-changes {
+    color: #c0c0c0;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.bi {
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.copy-icon {
+    &:hover {
+        color: rgb(255, 214, 80);
+    }
+}
+
+.edit-icon {
+
+    &:hover {
+        color: #2FDD92;
+    }
+
+}
+
+.delete-icon {
+    &:hover {
+        color: #ff3f00;
+    }
+}
+
+.download-icon {
+    &:hover {
+        color: #88E0EF;
+    }
+}
+
+/* Editor section */
+.editor-container {
+    width: 100%;
+    background-color: #f6f5f5;
+    padding: 33px 30px 33px 40px;
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+}
+
+.font-size-field,
+.font-color-field {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: auto;
+    text-align: center;
+    width: 70px;
+}
+
+.item-3 {
+    button {
+        width: 100%;
+        ;
+    }
+}
+
+.navigation-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.fonts-container,
+.text-styles-container {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 25px;
+    margin-top: 10px;
+    border-top-left-radius: 0;
+    position: absolute;
+    display: none;
+
+    button {
+        width: 100%;
+        text-align: left;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        border: 10px solid transparent;
+        border-bottom-color: #fff;
+        top: -20px;
+        left: 0;
+    }
+
+}
+
+
+.text-position-list {
+    display: flex;
+    gap: 10px;
+}
+
+.file-content-field {
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+    resize: none;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    background-color: #f6f5f5;
+    font-family: 'Inter';
+}
+
+.active-flex {
+    width: 100px;
+    display: flex;
+}
+
+
+.save-changes_button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #FF3F00;
+    color: #fff;
+    position: absolute;
+    bottom: -25px;
+    right: -25px;
+}
+
+.edit-pen-icon {
+    font-size: 30px;
+}
+
+.text-icon {
+    font-size: 22px;
+
+    &:hover {
+        color: #0044C7;
+    }
+}
+
+.active-icon {
+    color: #0044C7;
+}
+
+.current-font-family,
+.current-text-style {
+    font-size: 20px;
+}
+
+.text-style__button,
+.text-font_button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-list {
+    transform: rotate(180deg);
+}
+
+.create__new-file-button {
+    width: 95px;
+    height: 95px;
+    background-color: #2D46B9;
+    color: white;
+    border-radius: 50%;
+    line-height: 95px;
+    transition: .3s ease-in;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    bottom: 45px;
+    right: 20px;
+    z-index: 1000;
+
+    &:hover {
+        background-color: #1735b9;
+    }
+
+}
+
+.hidden-spot {
+    display: none;
+
+    &:checked~label>.create__new-file-button {
+        background-color: #FF3F00;
+        transform: rotate(45deg);
+    }
+
+    &:checked~.file-types .file {
+        bottom: 90px;
+        right: 140px;
+    }
+
+    &:checked~.file-types .html {
+        bottom: 150px;
+        right: 50px;
+    }
+
+}
+
+.create__file-icon {
+    font-size: 35px;
+}
+
+.fl {
+    width: 70px;
+    height: 70px;
+    box-sizing: content-box;
+    padding: 5px;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+
+    button {
+        color: white;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    position: absolute;
+}
+
+.file {
+    background-color: #3F3F44;
+    bottom: 50px;
+    right: 30px;
+
+    &:hover {
+        background-color: rgb(112, 112, 112);
+    }
+
+}
+
+.html {
+    background-color: #16C79A;
+    bottom: 50px;
+    right: 30px;
+
+    &:hover {
+        background-color: #00e2aa;
+    }
+
+}
+
+.create-new-file {
+    background-color: #F4F4F2;
+    box-shadow: none;
+}
+
+.create-new-file__button {
+    width: 100%;
+    height: 100%;
+    transition: .3s linear;
+
+    i {
+        font-size: 40px;
+        color: #C0C0C0;
+    }
+
+    &:hover {
+        background-color: rgb(236, 236, 236);
+    }
+
+    &:hover i {
+        color: black;
+    }
+
+}
+
+/* Creating section */
+
+.create-file_data-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-name-container,
+.file_content-container {
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 35px;
+}
+
+.file-name-field {
+    height: 70px;
+    font-size: 20px;
+    text-indent: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f6f5f5;
+}
+
+.file-content {
+    resize: none;
+    background-color: #F6F5F5;
+    border: none;
+    border-radius: 20px;
+    height: 500px;
+    font-family: 'Inter';
+    font-size: 22px;
+    padding: 15px 30px;
+    outline: none;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #C4C4C4;
+        border-radius: 100px;
+    }
+
+}
+
+.create-part {
+    bottom: 25px;
+    right: 25px;
+}
+
+/*
+    Download Section 
+*/
+
+.download-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f5f585;
+    z-index: 10000;
+    position: absolute;
+    color: #444444;
+}
+
+.download-container {
+    width: 70%;
+    border-radius: 20px;
+    height: 70%;
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 25px;
+}
+
+.dw-header-part {
+    $containerHeight: 15%;
+    width: 100%;
+    height: $containerHeight;
+    text-align: center;
+}
+
+.dw-main-container {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    gap: 15px;
+    padding-top: 40px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.dw-file-container {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    background-color: #f4f2f2;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.title-container {
+    width: 100%;
+    height: 25%;
+    background-color: #16C79A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    &.txt {
+        background-color: #c4c4c4;
+        color: #444444;
+    }
+
+}
+
+.main_dw-content-container {
+    height: 75%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.dw_file-button {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    background-color: #c4c4c4;
+    box-sizing: content-box;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+
+    &.dw-msWord_button {
+        background-color: #16C79A;
+        color: white;
+
+        &:hover {
+            background-color: #31d4ac;
+        }
+
+    }
+
+}
+
+.close-dw_block-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-icon {
+    font-size: 35px;
+}
+
+.file-content-field-editor,
+.file-content-field-preview {
+    width: 100%;
+    height: 50%;
+}
+
+.file-content-field-preview {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #C4C4C4;
+        border-radius: 100px;
+    }
+
+}
+
+.editor {
+    border: none;
+    outline: none;
+    width: inherit;
+    height: 100%;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    background-color: transparent;
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #C4C4C4;
+        border-radius: 100px;
+    }
+
+}
+
+.file-content-field-preview {
+    border-top: 3px solid #3F3F44;
+    border-radius: 0 0 10px 10px;
+    padding: 15px;
+}

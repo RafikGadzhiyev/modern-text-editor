@@ -34,7 +34,7 @@ function closeAllLists(e){
         }
     }
   
-}
+} 
 
 function activateEditorMenu(e){
   let closestListItem = e.target.closest('li');
